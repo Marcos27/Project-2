@@ -1,0 +1,9 @@
+<h1>Today's Users</h1>
+
+<ul>
+    <% @users.each do |i| %>
+        <li>
+            <strong> <%= i.name %> </strong> - <%= i.email %> - image url -> <%= i.image_url %>, password-> <%= i.password_digest %>
+        </li>
+    <% end %>
+</ul>

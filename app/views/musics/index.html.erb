@@ -1,0 +1,9 @@
+<h1>Today's Musics Line up</h1>
+
+<ul>
+    <% @musics.each do |i| %>
+        <li>
+            <strong> <%= i.artist%> </strong> - <%= i.song %>......<%= i.genre %>
+        </li>
+    <% end %>
+</ul>
