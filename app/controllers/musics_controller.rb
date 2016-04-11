@@ -1,47 +1,71 @@
 class MusicsController < ApplicationController
-
   def index
   @musics = Music.all
   end
-
 
   def show
   @music = Music.find(params[:id])
   end
 
-
   def new
-  @musics = Music.new
+  @music = Music.new
   end
 
+
   def create
-  @music = Music.new(params.require(:music).permit(:artist, :song, :genre))
+  @music = Music.new(music_params) # here we use our music_params method
 
   if @music.save
-    redirect_to musics_path
+    redirect to :musics
   else
     render :new
   end
 end
-def edit
-  @music = Music.find(params[:id])
-end
 
-def update
-  @music = Music.find(params[:id])
 
-  if @music.update_attributes(params.require(:music).permit(:artist, :song, :genre))
-    redirect_to musics_path
-  else
-    render :edit
+
+
+  def edit
+   @music = Music.find(params[:id])
   end
+
+
+  def update
+    @music = Music.find(params[:id])
+
+    if @music.update_attributes(music_params) #here we use our music_params method
+     redirect_to :musics
+    else
+     render :edit
+    end
+  end
+
+  def destroy
+    @music = Music.find(params[:id])
+    @music.destroy
+    redirect_to musics_path
+  end
+
+
+  # app/controllers/musics_controller.rb
+
+  # this gets added to the bottom of our controller
+  private
+  def music_params
+    params.require(:music).permit(:artist, :song, :genre)
+  end
+
+
+
+
+
 end
 
 
-def destroy
-  @music = Music.find(params[:id])
-  @music.destroy
-  redirect_to musics_path
-end
 
-end
+
+
+
+
+
+

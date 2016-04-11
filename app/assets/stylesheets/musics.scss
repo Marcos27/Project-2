@@ -1,3 +1,45 @@
-// Place all the styles related to the musics controller here.
+// Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  width: 500px;
+  margin: auto;
+  text-align: center
+}
+p {
+  font-size: 15px;
+}
+.name{
+  font-size: 30px;
+  color: red;
+}
+
+.space{
+  margin: 5px;
+}
+.artistTop{
+  border: 1px solid green;
+width: 100%;
+  display: inline-block;
+  background-color: green;
+}
+
+.bottomBtn{
+border: 1px solid green;
+width: 100%;
+  display: inline-block;
+  background-color: green;
+}
+.postmusic{
+  width: 100%;
+    margin: 15px;
+    background-color: rgba(172, 181, 241, 0.32);
+    display: inline-block;
+    border: 1px solid green;
+
+
+}
+
+
+

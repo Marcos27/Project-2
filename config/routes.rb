@@ -1,22 +1,7 @@
 Rails.application.routes.draw do
 
-get "users/" => "users#index"
-get "users/:id" => "users#show", as: :user
 
-resources :musics
-# get "musics/" => "musics#index"
-# get "musics/new" => "musics#new", as: :new_music
-# get "musics/:id" => "musics#show", as: :music
-
-
-
-  root 'users#index'
-  get "/register", to: "users#new"
-  get "/login", to: "sessions#new"
-
- resources :sessions, only: [:new, :create, :destroy]
- # resources :users
- resources :users, except: [:index, :destroy]
+ resources :musics
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
