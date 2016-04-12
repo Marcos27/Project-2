@@ -6,7 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+# Music.all.each do |m|
+#   m.user = User.all.sample
+#   m.save
+# end
 
 User.create([
     {name: "Marcos", email: "marcos@yahoo.com", password_digest: "123", image_url: "none"},

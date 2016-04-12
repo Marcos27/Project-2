@@ -1,18 +1,22 @@
-<h1>Today's Song</h1>
 
+<center>
+<div id="musicIndex"><h1>Today's Song</h1></div>
+<% @musics.each do |i| %>
 
-
-
-    <% @musics.each do |i| %>
-<div class="postmusic">
-             <%= i.artist %> <br><strong> <%= i.song %> </strong><br> <%= i.genre %> <br>
-
-            <button type="button"><%= link_to "More info", music_path(i) %></button>
-            | <button type="button"><%= link_to "Delete", music_path(i), method: :delete, data: { confirm: "Are you sure you want to delete this Song?"} %></button>
-            | <button type="button"><%= link_to "Edit", edit_music_path(i) %></button>
-
-
-        <br>
-        </div>
+  <div class="postmusic">
+    <% if i.user %>
+      <%= i.user.name %> <br>
+      <img src = "<%= i.user.image_url %>" width=100px height=100px ><br>
     <% end %>
+    <%= i.artist %> <h3> <%= i.song %> </h3> <%= i.genre %> <br>
+  <button type="button"><%= link_to "More info", music_path(i) %></button> |
+  <button type="button"><%= link_to "Delete", music_path(i), method: :delete, data: { confirm: "Are you sure you want to delete this Song?"} %></button> |
+  <button type="button"><%= link_to "Edit", edit_music_path(i) %></button>
+  <br><br>
+</div>
 
+<% end %>
+
+<button type="button" class="btn btn-success"><%= link_to 'New Song', new_music_path %></button>
+
+</center>

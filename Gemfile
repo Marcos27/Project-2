@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby "2.2.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
@@ -31,6 +32,8 @@ gem 'twitter-bootstrap-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+
+gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
