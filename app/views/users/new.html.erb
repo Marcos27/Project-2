@@ -1,3 +1,14 @@
+<video autoplay loop>
+
+<source src="//vimeo-hp-videos.global.ssl.fastly.net/1/1-vp8.webm " type="video/webm">
+<!-- //vimeo-hp-videos.global.ssl.fastly.net/4/4-vp8.webm -->
+<!-- //vimeo-hp-videos.global.ssl.fastly.net/2/2-vp9.webm -->
+<!-- //vimeo-hp-videos.global.ssl.fastly.net/6/6-vp9.webm -->
+<!-- //vimeo-hp-videos.global.ssl.fastly.net/0/0-vp8.webm -->
+</video>
+<center>
+
+<div id="polina">
 <h1>Sign Up</h1>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
@@ -11,24 +22,24 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder=> "  Name" %>
   </div>
   <div class="field">
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
+    <%= f.text_field :image_url, :placeholder=> "  Image URL"  %>
   </div>
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :placeholder=> "  Email"  %>
   </div>
   <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :placeholder=> "  Password"  %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, :placeholder=> "  Password Confirmation"  %>
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
+<br>
+<p> Already have an Account? <span id="green">Log In.</span> </p>
+</div>
+
+</center>

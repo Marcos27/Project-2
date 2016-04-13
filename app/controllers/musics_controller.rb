@@ -8,6 +8,11 @@ class MusicsController < ApplicationController
 
   def index
   @musics = Music.all
+  @musics = @musics.sort_by do |x|
+    x.likes.count
+  end
+  @musics.reverse!
+  @new_like = Like.new
   end
 
   def show

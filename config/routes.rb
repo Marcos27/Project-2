@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
 
+  get 'likes/create'
+
   root 'musics#index'
   resources :musics
   resources :users, only: [:new, :create]
+  resources :comments
 
 
 
 # Create a better looking URL for logging in
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
+  get '/like/:user_id/:music_id', to: 'likes#post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

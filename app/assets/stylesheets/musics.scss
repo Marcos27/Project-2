@@ -7,16 +7,9 @@ body{
   text-align: center;
   width: 100%;
 }
-.NavBar{
 
-  text-align: center;
-  width: 100%;
-  height: 10%;
-  border: 2px solid grey;
-  background-color: grey;
-}
 #NavBarText{
-   color: blue;
+   color: #428bca;
    font-size: 25px;
  }
  #NavBarTextLink{
@@ -28,6 +21,16 @@ body{
   width: 40%;
   height: 75px;
   border: 2px solid black;
+}
+#con-profile-pic{
+  display: inline-block;
+    width: 30%;
+    height: 30%;
+    position: relative;
+    top: 5px;
+    left:   -121px;
+    border: 2px solid grey;
+    background-color: lightblue;
 }
 p {
   font-size: 15px;
@@ -64,4 +67,38 @@ width: 100%;
 }
 
 
+.btn-like{
+  color: blue;
+}
+.background{
+
+
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background-color: black;
+  background-size: cover;
+
+}
+
+#music-picks{
+  position: fixed;
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 50%;
+  margin:2rem;
+  float: center;
+  font-size: 1.2rem;
+  text-align: center;
+  top: 25%;
+  left: 25%;
+}
 

@@ -33,6 +33,8 @@ gem 'twitter-bootstrap-rails'
 # gem 'unicorn'
 
 
+gem "paperclip", "~> 5.0.0.beta1"
+
 gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

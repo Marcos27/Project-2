@@ -7,11 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="NavBar">
+  <div class="navbar navbar-fixed-top navbar-default">
     <% if current_user %>
-      <span id="NavBarText">Welcome, <%= current_user.name %></span>
+      <span id="NavBarText">Welcome, <%= current_user.name %></span><span id="NavBarTextLink">
       &nbsp;&nbsp;|&nbsp;&nbsp;
-      <span id="NavBarTextLink"><%= link_to 'Logout', session_path('dummy'), method: :delete %></span>
+     <%= link_to 'Logout', session_path('dummy'), method: :delete %></span>
 
     <% else %>
       <span id="NavBarTextLink"><%= link_to 'Login', login_path %>

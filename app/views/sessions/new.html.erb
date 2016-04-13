@@ -1,13 +1,24 @@
+<video autoplay loop>
+
+<source src="//vimeo-hp-videos.global.ssl.fastly.net/6/6-vp9.webm" type="video/webm">
+<!-- //vimeo-hp-videos.global.ssl.fastly.net/4/4-vp8.webm -->
+<!-- //vimeo-hp-videos.global.ssl.fastly.net/2/2-vp9.webm -->
+<!-- //vimeo-hp-videos.global.ssl.fastly.net/1/1-vp8.webm -->
+<!-- //vimeo-hp-videos.global.ssl.fastly.net/0/0-vp8.webm -->
+</video>
+<center>
+<div id="polina">
 <h1>Login</h1>
 <p id="alert"><%= alert %></p>
 <%= form_tag sessions_path do %>
   <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
+    <%= text_field_tag :email, params[:email], :placeholder=> "  Email" %>
   </div>
   <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+
+    <%= password_field_tag :password, params[:password], :placeholder => "  Password" %>
   </div>
   <div class="actions"><%= submit_tag "Log in" %></div>
 <% end %>
+</div>
+</center>
