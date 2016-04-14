@@ -11,7 +11,9 @@
     <% if current_user %>
       <span id="NavBarText">Welcome, <%= current_user.name %></span><span id="NavBarTextLink">
       &nbsp;&nbsp;|&nbsp;&nbsp;
-     <%= link_to 'Logout', session_path('dummy'), method: :delete %></span>
+     <%= link_to 'Logout', session_path('dummy'), method: :delete %>
+     &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to 'New Song', new_music_path %></span>
 
     <% else %>
       <span id="NavBarTextLink"><%= link_to 'Login', login_path %>

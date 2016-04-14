@@ -64,7 +64,7 @@ end
   # this gets added to the bottom of our controller
   private
   def music_params
-    params.require(:music).permit(:artist, :song, :genre)
+    params.require(:music).permit(:artist, :song, :genre, :youtube_url)
   end
 
   def set_music
