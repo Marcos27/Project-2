@@ -14,7 +14,7 @@ video {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
+    z-index: -100;
     transform: translateX(-50%) translateY(-50%);
  background: url('//vimeo-hp-videos.global.ssl.fastly.net/6/6-vp9.webm') no-repeat;
  background-color: black;
@@ -290,8 +290,8 @@ color: #BF313A;
 }
 
 .profile-post-likes {
+  color: white;
     display: inline-block;
-    border: 4px solid transform;
     width: 375px;
     background-color: rgba(0, 0, 0, 0.3);
     margin: 5px;
@@ -300,24 +300,38 @@ color: #BF313A;
 
 .profile-post-likes:hover{
   display: inline-block;
-  border: 4px solid green;
+
  background-color: rgba(33, 159, 24, 0.4);
 }
 
 
 .profile-title{
+  color: white;
   margin: 15px;
   border: 2px solid green;
   width: 40%;
+    background-color: rgba(0, 0, 0, 0.3);
 
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    transform: translate3d(0, 0, 0);
 }
 
 
 
 .profile-title-like{
-
+color: white;
  margin: 10px;
   border: 2px solid green;
   width: 20%;
+    background-color: rgba(0, 0, 0, 0.3);
 
+}
+.block{
+  display: block;
 }
