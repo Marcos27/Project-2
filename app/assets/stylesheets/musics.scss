@@ -14,7 +14,7 @@ video {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
+    z-index: -1;
     transform: translateX(-50%) translateY(-50%);
  background: url('//vimeo-hp-videos.global.ssl.fastly.net/6/6-vp9.webm') no-repeat;
  background-color: black;
@@ -31,10 +31,20 @@ video {
   color: green;
 
 }
+.Info-btn{
+  color: #428bca;
+}
 #musicIndex{
-  width: 40%;
-  height: 75px;
-  border: 2px solid black;
+    text-align: center;
+    font-family: serif;
+    width: 40%;
+    height: 58px;
+    color: powderblue;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+#Title-header{
+  font-size: 60px;
 }
 #con-profile-pic{
   display: inline-block;
@@ -70,23 +80,22 @@ width: 100%;
   display: inline-block;
   background-color: green;
 }
-.postmusic{
-  width: 40%;
-    margin: 15px;
-min-height: 546px;
-    background-color: rgba(0,0,0,0.3);
+.postmusic {
+    width: 40%;
+    margin: 50px;
+    min-height: 546px;
+    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     display: block;
     border: none;
     padding: 4px;
-        border-radius: 22px;
-
-
+    box-shadow: 0px 0px 58px 14px gainsboro;
+    border-radius: 22px;
 }
 
 .postmusic-comments{
   width: 40%;
-      height: 546px;
+      height: 600px;
     margin: 15px;
     background-color: rgba(172, 181, 241, 0.45);
      color: black;
@@ -94,23 +103,21 @@ min-height: 546px;
     border: none;
     padding: 4px;
         border-radius: 22px;
-
-
-
  overflow: scroll;
 
 
 }
-
-
-
-
-.btn-like{
-  color: white;
-    width: 40px;
-    border-radius: 35px;
-    height: 40px;
+.carousel-indicators .active {
+    margin: 0;
+    width: 12px;
+    height: 12px;
+    background-color: gold;
 }
+
+
+
+
+
 
 .btn-like-liked{
   color: white;
@@ -204,9 +211,6 @@ height: 30%;
 color: black;
 }
 
-.glyphicon-search:hover {
-    color:#1EF582;
-}
 
 
 .glyphicon-pencil:hover{
@@ -231,7 +235,9 @@ color: #BF313A;
     margin-top: -15px;
     font-size: 69px;
 }
-img{
+#profile-picture{
+  width: 100px;
+   height: 100px;
   border-radius: 50px;
 }
 
@@ -281,7 +287,37 @@ img{
             transform-origin :100% 100%;
 }
 .none{
+}
+
+.profile-post-likes {
+    display: inline-block;
+    border: 4px solid transform;
+    width: 375px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    margin-left: 31px;
+}
+
+.profile-post-likes:hover{
+  display: inline-block;
+  border: 4px solid green;
+ background-color: rgba(33, 159, 24, 0.4);
+}
 
 
+.profile-title{
+  margin: 15px;
+  border: 2px solid green;
+  width: 40%;
+
+}
+
+
+
+.profile-title-like{
+
+ margin: 10px;
+  border: 2px solid green;
+  width: 20%;
 
 }

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'musics#index'
   resources :musics
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :index]
   resources :comments
 
 

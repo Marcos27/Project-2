@@ -4,6 +4,13 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @musics = []
+    current_user.likes.each do |l|
+      @musics.push(l.music)
+    end
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save

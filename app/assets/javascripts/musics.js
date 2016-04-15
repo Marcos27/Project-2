@@ -5,9 +5,11 @@ $(document).ready(function() {
     $('.none').addClass('heart')
     $('.heart').fadeIn(250)
     $('.heart').fadeOut(2300)
-    $('.btn-like-liked').click(function(){
+    setTimeout(function() {
       $('.none').removeClass('heart')
-    })
+
+    },2300)
+
   });
 });
 
