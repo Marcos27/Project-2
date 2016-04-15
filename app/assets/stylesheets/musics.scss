@@ -288,36 +288,3 @@ color: #BF313A;
 }
 .none{
 }
-
-.profile-post-likes {
-    display: inline-block;
-    border: 4px solid transform;
-    width: 375px;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 5px;
-    margin-left: 31px;
-}
-
-.profile-post-likes:hover{
-  display: inline-block;
-  border: 4px solid green;
- background-color: rgba(33, 159, 24, 0.4);
-}
-
-
-.profile-title{
-  margin: 15px;
-  border: 2px solid green;
-  width: 40%;
-
-}
-
-
-
-.profile-title-like{
-
- margin: 10px;
-  border: 2px solid green;
-  width: 20%;
-
-}
