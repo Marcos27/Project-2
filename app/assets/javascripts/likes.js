@@ -6,7 +6,7 @@ $(document).ready(function() {
     var musicId = $(this).attr('data-music');
     console.log(userId, musicId)
     $.ajax({
-      url: 'http://localhost:3000/like/'+userId+'/'+musicId,
+      url: '/like/'+userId+'/'+musicId,
       type: 'GET'
     })
     .done(function(response) {

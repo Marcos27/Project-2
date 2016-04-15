@@ -16,7 +16,7 @@ User.create([
   ])
 
 Music.create([
-    {artist: "The Weeknd", song: "The Hills", genre: "R&B", youtube_url: "https://www.youtube.com/watch?v=yzTuBuRdAyA"},
+    {artist: "The Weeknd", song: "The Hills", genre: "R&B", youtube_url: "https://www.youtube.com/watch?v=yzTuBuRdAyA", user_id: User.first.id },
   ])
 
 Comment.create([
