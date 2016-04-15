@@ -12,9 +12,13 @@
 # end
 
 User.create([
-    {name: "Marcos", email: "marcos@yahoo.com", password_digest: "123", image_url: "none"},
+    {name: "Marcos", email: "marcos@yahoo.com", password: "123", image_url: "http://ia.media-imdb.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_UX214_CR0,0,214,317_AL_.jpg"},
   ])
 
 Music.create([
-    {artist: "The Weeknd", song: "Next", genre: "R&B"},
+    {artist: "The Weeknd", song: "The Hills", genre: "R&B", youtube_url: "https://www.youtube.com/watch?v=yzTuBuRdAyA"},
+  ])
+
+Comment.create([
+    {content: "Cool", user: User.first, music: Music.first}
   ])

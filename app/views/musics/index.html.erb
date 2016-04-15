@@ -70,6 +70,8 @@
                 <h3> <%= i.user.name %> Comments:</h3>
                 <% i.comments.each do |comment| %>
                 <br>
+                  <strong><%= comment.user.name %>:</strong> <%= comment.content %> | <%= link_to  music_path(comment), method: :delete, data: { confirm: "Are you sure you want to delete this Song?"} do %> <span class="glyphicon glyphicon-remove" aria-hidden="true"><% end %>
+                  </span>
 
 
                   <% end %>
