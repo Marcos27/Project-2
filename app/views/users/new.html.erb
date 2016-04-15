@@ -19,8 +19,9 @@
           <li><%= message %></li>
         <% end %>
       </ul>
-    </div>
-  <% end %>
+      <% end %>
+      <h5> <span style="color: #428bca; font-size: 40px"><%= User.all.count %></span> have signed up so far.</h5>
+    <div class="field">
   <div class="field">
     <%= f.text_field :name, :placeholder=> "  Name" %>
   </div>

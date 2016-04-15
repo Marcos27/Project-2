@@ -9,20 +9,21 @@
 
 
 <center>
+
   <div class="profile-title">
     <h2><%= current_user.name %> Profile</h2>
   </div>
   <div class="profile-title-like">
-    <h3>All your Likes</h3>
+    <h3>All your Likes <span style="color: #428bca; font-size: 40px"><%= current_user.likes.count %></span></h3>
   </div>
-
-
-
+  <br>
+  <%= link_to new_music_path do %><span class="btn btn-success">Add A Song To Your feed<% end %>
+  <br>
   <% @musics.each do |music| %>
     <div class="profile-post-likes col-md-1">
     <%= link_to  music_path(music), method: :delete, data: { confirm: "Are you sure you want to delete this Song?"} do %>
                   <span class="glyphicon glyphicon-remove float-right" aria-hidden="true"><% end %>
-      <%= music.song %>
+      <h3><%= music.song %></h3>
       <br>
       <%= music.artist %>
       <iframe width="98%" height="250px" src="https://www.youtube.com/embed/<%= music.youtube_url.split('v=')[1].split('&')[0] %>" frameborder="0" allowfullscreen></iframe>
