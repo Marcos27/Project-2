@@ -14,7 +14,7 @@ video {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
+    z-index: -100;
     transform: translateX(-50%) translateY(-50%);
  background: url('//vimeo-hp-videos.global.ssl.fastly.net/6/6-vp9.webm') no-repeat;
  background-color: black;
@@ -335,5 +335,4 @@ color: #BF313A;
     z-index: 1030;
     transform: translate3d(0, 0, 0);
 }
-
 
